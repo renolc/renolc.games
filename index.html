@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>renolc.games</title>
+    <style></style>
+  </head>
+  <body class="full-height">
+    <div class="container center-text">
+      <h1>renolc.games</h1>
+
+      <p>
+        Just a dude making games. I'm currently working on a 2.5D action
+        adventure dungeon crawler thingie.
+      </p>
+
+      <p>
+        Sign up below to get monthly updates and to save your spot for the
+        upcoming beta.
+      </p>
+
+      <form
+        action="https://assets.mailerlite.com/jsonp/801115/forms/111794480897590774/subscribe"
+        data-code=""
+        method="post"
+      >
+        <div class="flex">
+          <input
+            type="email"
+            name="fields[email]"
+            placeholder="Email"
+            autocomplete="email"
+          />
+          <button type="submit" class="primary">Subscribe</button>
+        </div>
+
+        <input type="hidden" name="ml-submit" value="1" />
+        <input type="hidden" name="anticsrf" value="true" />
+
+        <p class="small-text">
+          You can unsubscribe anytime.
+          <br />
+          <a href="/privacy-policy" target="_blank">Privacy Policy</a>
+        </p>
+      </form>
+
+      <div class="thanks hidden">
+        <p>Thanks for subscribing!</p>
+      </div>
+    </div>
+
+    <script>
+      const form = document.querySelector('form')
+      const email = form.querySelector("input[name='fields[email]']")
+      const thanks = document.querySelector('.thanks')
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+
+        if (email.value) {
+          fetch(form.action, {
+            method: 'POST',
+            body: new URLSearchParams(new FormData(form))
+          })
+          form.classList.add('hidden')
+          thanks.classList.remove('hidden')
+        } else {
+          email.classList.add('error')
+        }
+      })
+
+      form.addEventListener('input', e => {
+        form
+          .querySelector("input[name='fields[email]']")
+          .classList.remove('error')
+      })
+    </script>
+  </body>
+</html>
