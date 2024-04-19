@@ -49,22 +49,17 @@
       </p>
 
       <form
-        action="https://assets.mailerlite.com/jsonp/801115/forms/111810341586863986/subscribe"
-        data-code=""
-        method="post"
+        action="https://script.google.com/macros/s/AKfycby-fFLmaOroc297E4JzXYIdth9CBG9RlIxKHRenapq3MWdjwbFvwQSe-F-wZnlM1Br9sQ/exec"
       >
         <div class="flex">
           <input
             type="email"
-            name="fields[email]"
+            name="Email"
             placeholder="Email"
             autocomplete="email"
           />
           <button type="submit" class="primary">Subscribe</button>
         </div>
-
-        <input type="hidden" name="ml-submit" value="1" />
-        <input type="hidden" name="anticsrf" value="true" />
 
         <p class="small-text">
           You can unsubscribe anytime.
@@ -72,13 +67,13 @@
       </form>
 
       <div class="thanks hidden">
-        <p>Thanks! Look out for a confirmation email to complete sign up.</p>
+        <p>Thanks for signing up!</p>
       </div>
     </div>
 
     <script>
       const form = document.querySelector('form')
-      const email = form.querySelector("input[name='fields[email]']")
+      const email = form.querySelector('input')
       const thanks = document.querySelector('.thanks')
 
       form.addEventListener('submit', e => {
@@ -97,9 +92,7 @@
       })
 
       form.addEventListener('input', e => {
-        form
-          .querySelector("input[name='fields[email]']")
-          .classList.remove('error')
+        email.classList.remove('error')
       })
     </script>
   </body>
