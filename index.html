@@ -49,51 +49,29 @@
       </p>
 
       <form
-        action="https://script.google.com/macros/s/AKfycby-fFLmaOroc297E4JzXYIdth9CBG9RlIxKHRenapq3MWdjwbFvwQSe-F-wZnlM1Br9sQ/exec"
+        action="http://sendy.renolc.games/subscribe"
+        method="POST"
+        accept-charset="utf-8"
       >
         <div class="flex">
           <input
             type="email"
-            name="Email"
+            name="email"
+            id="email"
             placeholder="Email"
-            autocomplete="email"
-          />
+          /><br />
+          <div style="display: none;">
+            <label for="hp">HP</label><br />
+            <input type="text" name="hp" id="hp" />
+          </div>
+          <input type="hidden" name="list" value="TrjKR2m77635D763YU8eAqoAPg" />
+          <input type="hidden" name="subform" value="yes" />
           <button type="submit" class="primary">Subscribe</button>
         </div>
-
         <p class="small-text">
           You can unsubscribe anytime.
         </p>
       </form>
-
-      <div class="thanks hidden">
-        <p>Thanks for signing up!</p>
-      </div>
     </div>
-
-    <script>
-      const form = document.querySelector('form')
-      const email = form.querySelector('input')
-      const thanks = document.querySelector('.thanks')
-
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-
-        if (email.value) {
-          fetch(form.action, {
-            method: 'POST',
-            body: new URLSearchParams(new FormData(form))
-          })
-          form.classList.add('hidden')
-          thanks.classList.remove('hidden')
-        } else {
-          email.classList.add('error')
-        }
-      })
-
-      form.addEventListener('input', e => {
-        email.classList.remove('error')
-      })
-    </script>
   </body>
 </html>
