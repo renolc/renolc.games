@@ -70,6 +70,20 @@ class SiteHeader extends HTMLElement {
           width: 24px;
           height: 24px;
         }
+
+        @media (max-width: 640px) {
+          header {
+            padding: 1rem 1rem;
+          }
+
+          .logo-text {
+            display: none;
+          }
+
+          .social-links {
+            gap: 0.5rem;
+          }
+        }
       </style>
 
       <header>
