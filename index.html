@@ -3,75 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="48x48"
-      href="./favicons/favicon-48.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicons/favicon-32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicons/favicon-16.png"
-    />
-    <link rel="manifest" href="./favicons/manifest.json" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
     <title>renolc.games</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <script type="module" src="./components/site-header.js"></script>
+    <script type="module" src="./components/cta-section.js"></script>
+    <script type="module" src="./components/game-tile.js"></script>
+    <script type="module" src="./components/games-grid.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+      }
+      
+      .games-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+    </style>
   </head>
-  <body class="full-height">
-    <div class="container center-text">
-      <h1>renolc.games</h1>
-
-      <p>
-        Just a dude making games. I'm currently in experiment mode, trying to
-        find my next project.
-      </p>
-
-      <p>
-        Sign up below to get monthly updates and to save your spot for any
-        upcoming betas.
-      </p>
-
-      <form
-        action="https://sendy.renolc.games/subscribe"
-        method="POST"
-        accept-charset="utf-8"
-      >
-        <div class="flex">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-          /><br />
-          <div style="display: none;">
-            <label for="hp">HP</label><br />
-            <input type="text" name="hp" id="hp" />
-          </div>
-          <input type="hidden" name="list" value="TrjKR2m77635D763YU8eAqoAPg" />
-          <input type="hidden" name="subform" value="yes" />
-          <button type="submit" class="primary">Subscribe</button>
-        </div>
-        <p class="small-text">
-          You can unsubscribe anytime.
-        </p>
-      </form>
-    </div>
+  <body>
+    <site-header></site-header>
+    
+    <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+      <!-- <cta-section 
+        title="New Game Coming Soon!"
+        description="Wishlist our upcoming adventure game on Steam and be the first to play when it launches."
+        button-text="Wishlist on Steam"
+        button-link="#"
+        image="https://placehold.co/800x600"
+        theme="dark">
+      </cta-section> -->
+      
+      <h2 style="margin-top: 3rem; margin-bottom: 1rem;">Games</h2>
+      <games-grid></games-grid>
+    </main>
   </body>
 </html>

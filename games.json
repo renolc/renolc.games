@@ -1,0 +1,46 @@
+{
+    "games": [
+        {
+            "id": "fire-escape",
+            "name": "Fire Escape",
+            "tagline": "A game about throwing things out windows in order to save them from a house fire",
+            "description": "<h2>About the Game</h2><p><strong>Fire Escape</strong> is my second 3D game jam entry, created for Vimjam 5 in about a week. After my first 3D game focused on modeling, I wanted to tackle more complex gameplay mechanics this time. I used a 3D asset pack so I could dedicate all my energy to making the game feel good to play.</p><p>Your house is on fire, and you need to save as much as you can! Grab items and hurl them out windows or doors before the flames consume them. Every item has custom physics and a price value - will you risk going deeper into the burning house for that expensive item, or play it safe with smaller items near the exits?</p><h3>Key Features</h3><ul><li>Dynamic fire spreading system that's challenging yet fair</li><li>Custom physics for each item type - lightweight items fly differently than heavy ones</li><li>Strategic gameplay: balance risk vs reward as you decide what to save</li><li>Unique throwing mechanics - aim for windows and doors to maximize your score</li><li>Created in about a week for a game jam</li><li>Free to play in your browser</li></ul><h3>Development</h3><p>I put a lot of work into getting the fire spreading mechanics just right - it needed to feel dangerous and urgent, but still give players enough time to make meaningful decisions. The item physics were also a big focus, with each object behaving realistically based on its weight and shape. The controls for moving items can be a bit finicky, but I'm very proud of how this game turned out, especially given the tight timeframe.</p>",
+            "image": "/assets/images/fire-escape/hero.png",
+            "screenshots": [
+                "/assets/images/fire-escape/screen1.gif",
+                "/assets/images/fire-escape/screen2.png",
+                "/assets/images/fire-escape/screen3.png",
+                "/assets/images/fire-escape/screen4.png",
+                "/assets/images/fire-escape/screen5.png"
+            ],
+            "itchLink": "https://renolc.itch.io/fire-escape",
+            "itchButtonText": "Play on Itch.io"
+        },
+        {
+            "id": "shadows-til-sunrise",
+            "name": "Shadows 'Til Sunrise",
+            "tagline": "A short escape room game where your life is on the line",
+            "description": "<h2>About the Game</h2><p>My first 3D game! <strong>Shadows 'Til Sunrise</strong> is a short escape room experience I created for Godot Wild Jam 66 over the span of about 3 days. Since this was my first foray into 3D game development, I intentionally kept the mechanics simple so I could focus on learning the fundamentals.</p><p>I spent most of the jam time doing 3D modeling, and I'm really happy with how the low poly, crunchy aesthetic turned out. It gives the game a distinct visual style that I wasn't originally planning for but ended up loving.</p><h3>Key Features</h3><ul><li>Compact escape room experience designed to be completed in one sitting</li><li>Low poly 3D art style with a crunchy, stylized look</li><li>Simple mechanics that focus on exploration and puzzle-solving</li><li>Created in just 3 days for a game jam</li><li>Free to play in your browser</li></ul><h3>Development</h3><p>This project was a huge learning experience for me as my first venture into 3D game development. Working within the tight time constraints of a game jam forced me to focus on what really mattered and not get lost in feature creep. The result is a short but cohesive experience that I'm proud to share.</p>",
+            "image": "/assets/images/shadows-til-sunrise/hero.png",
+            "screenshots": [
+                "/assets/images/shadows-til-sunrise/screen1.png",
+                "/assets/images/shadows-til-sunrise/screen2.png",
+                "/assets/images/shadows-til-sunrise/screen3.png"
+            ],
+            "itchLink": "https://renolc.itch.io/shadows-til-sunrise",
+            "itchButtonText": "Play on Itch.io"
+        },
+        {
+            "id": "hot-sauce-chaos",
+            "name": "Hot Sauce Chaos",
+            "tagline": "A spicy arcade game where time is not on your side",
+            "description": "<h2>About the Game</h2><p>My first public game! <strong>Hot Sauce Chaos</strong> is a tapper-inspired arcade game where you serve hot sauce to hungry customers. Keep them satisfied by quickly serving bottles, and catch any empties they toss back before they hit the floor.</p><p>The challenge ramps up as more customers arrive demanding faster service. You'll need quick reflexes and smart risk management to succeed. Best of all, it's completely free and playable right in your browser!</p><h3>Key Features</h3><ul><li>Classic tapper-style gameplay with a spicy twist</li><li>Fast-paced action that tests your multitasking skills</li><li>Upgrades like temporary speed boosts to help you keep up</li><li>Extra cash tips scattered around - but you'll have to leave your taps to grab them</li><li>Risk vs reward: abandon your post for bonuses or play it safe?</li><li>Free to play directly in your browser - no downloads needed</li></ul><h3>Gameplay</h3><p>Serve hot sauce bottles to customers at multiple taps to keep them happy and make them leave. Catch the empty bottles they throw back, or watch your score drop when they shatter! Power-ups and cash bonuses appear throughout the level, tempting you to leave your taps unattended. Will you play it safe or risk it all for the high score?</p>",
+            "image": "/assets/images/hot-sauce-chaos/hero.png",
+            "screenshots": [
+                "/assets/images/hot-sauce-chaos/screen1.png"
+            ],
+            "itchLink": "https://renolc.itch.io/hot-sauce-chaos",
+            "itchButtonText": "Play on Itch.io"
+        }
+    ]
+}
