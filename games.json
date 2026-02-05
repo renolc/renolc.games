@@ -5,12 +5,13 @@
             "name": "The Door at the End of the Hall",
             "tagline": "A forever repeating hallway with a mysterious locked door. Can you find a way out?",
             "description": "<h2>About the Game</h2><p><strong>The Door at the End of the Hall</strong> is my first commercial game, coming to Steam in 2026! This 3D first-person anomaly finder puts you in a mysterious, endlessly repeating hallway with no obvious way out. At the end of it stands a locked door—your only hope of escape.</p><p>You awake confused and disoriented. The hallway seems normal at first, but something isn't right. As you explore, you'll need to look carefully for what seems odd or out of place. Each anomaly you discover brings you closer to understanding how to unlock the door and escape this strange loop.</p><h3>Key Features</h3><ul><li>First-person 3D anomaly detection gameplay</li><li>Atmospheric exploration in a mysterious repeating hallway</li><li>Careful observation is key—spot what's different to progress</li><li>Uncover the mystery behind the locked door</li><li>Coming to Steam in 2026</li></ul><h3>Development</h3><p>This game is currently in active development and playtesting. It represents my first venture into commercial game development, and I'm excited to bring this atmospheric puzzle experience to players on Steam. A Steam page will go live soon with more details and an exact release date. Stay tuned!</p>",
-            "image": "/assets/images/the-door-at-the-end-of-the-hall/wip/logo.png",
+            "image": "/assets/images/the-door-at-the-end-of-the-hall/capsule.png",
             "screenshots": [
-                "/assets/images/the-door-at-the-end-of-the-hall/wip/screen1.png",
-                "/assets/images/the-door-at-the-end-of-the-hall/wip/screen2.png",
-                "/assets/images/the-door-at-the-end-of-the-hall/wip/screen3.png",
-                "/assets/images/the-door-at-the-end-of-the-hall/wip/screen4.png"
+                "/assets/images/the-door-at-the-end-of-the-hall/Screenshot_1.png",
+                "/assets/images/the-door-at-the-end-of-the-hall/Screenshot_2.png",
+                "/assets/images/the-door-at-the-end-of-the-hall/Screenshot_3.png",
+                "/assets/images/the-door-at-the-end-of-the-hall/Screenshot_4.png",
+                "/assets/images/the-door-at-the-end-of-the-hall/Screenshot_5.png"
             ],
             "banner": "Coming Soon",
             "bannerColor": "blue"
