@@ -10,7 +10,7 @@ class GamesGrid extends HTMLElement {
 
   async loadGames() {
     try {
-      const response = await fetch('/games.json');
+      const response = await fetch('/games.json', { cache: 'no-store' });
       const data = await response.json();
       this.render(data.games);
     } catch (error) {
@@ -47,6 +47,8 @@ class GamesGrid extends HTMLElement {
             image="${game.image}"
             ${game.steamLink ? `steam-link="${game.steamLink}"` : ''}
             ${game.itchLink ? `itch-link="${game.itchLink}"` : ''}
+            ${game.banner ? `banner="${game.banner}"` : ''}
+            ${game.bannerColor ? `banner-color="${game.bannerColor}"` : ''}
             info-link="/games/${game.id}/">
           </game-tile>
         `).join('')}

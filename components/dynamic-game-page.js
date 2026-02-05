@@ -14,7 +14,7 @@ class DynamicGamePage extends HTMLElement {
       const pathParts = window.location.pathname.split('/').filter(p => p);
       const gameId = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2];
       
-      const response = await fetch('/games.json');
+      const response = await fetch('/games.json', { cache: 'no-store' });
       const data = await response.json();
       const game = data.games.find(g => g.id === gameId);
       

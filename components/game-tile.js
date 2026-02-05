@@ -9,7 +9,7 @@ class GameTile extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['game-name', 'image', 'steam-link', 'itch-link', 'info-link'];
+    return ['game-name', 'image', 'steam-link', 'itch-link', 'info-link', 'banner', 'banner-color'];
   }
 
   attributeChangedCallback() {
@@ -22,6 +22,8 @@ class GameTile extends HTMLElement {
     const steamLink = this.getAttribute('steam-link');
     const itchLink = this.getAttribute('itch-link');
     const infoLink = this.getAttribute('info-link') || `/games/${gameName.toLowerCase().replace(/\s+/g, '-')}`;
+    const banner = this.getAttribute('banner');
+    const bannerColor = this.getAttribute('banner-color') || 'blue';
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -61,6 +63,42 @@ class GameTile extends HTMLElement {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+
+        .banner {
+          position: absolute;
+          top: 2.25rem;
+          left: -3rem;
+          transform: rotate(-45deg);
+          padding: 0.35rem 3rem;
+          font-size: 0.75rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #fff;
+          text-align: center;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+          z-index: 10;
+          letter-spacing: 0.5px;
+        }
+
+        .banner-blue {
+          background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+
+        .banner-green {
+          background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        .banner-orange {
+          background: linear-gradient(135deg, #e67e22, #d35400);
+        }
+
+        .banner-red {
+          background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .banner-purple {
+          background: linear-gradient(135deg, #9b59b6, #8e44ad);
         }
 
         .tile-content {
@@ -192,6 +230,7 @@ class GameTile extends HTMLElement {
       <div class="tile">
         <a href="${infoLink}" class="tile-image-container">
           ${image ? `<img src="${image}" alt="${gameName}" class="tile-image" />` : ''}
+          ${banner ? `<div class="banner banner-${bannerColor}">${banner}</div>` : ''}
         </a>
         <div class="tile-content">
           <h3 class="tile-title">${gameName}</h3>

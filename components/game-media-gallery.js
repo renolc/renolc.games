@@ -4,10 +4,11 @@ class GameMediaGallery extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.currentImageIndex = 0;
     this.imageList = [];
+    this._renderTimeout = null;
   }
 
   connectedCallback() {
-    this.render();
+    this.scheduleRender();
   }
 
   static get observedAttributes() {
@@ -15,16 +16,34 @@ class GameMediaGallery extends HTMLElement {
   }
 
   attributeChangedCallback() {
-    this.render();
+    this.scheduleRender();
+  }
+
+  scheduleRender() {
+    // Debounce renders to avoid multiple re-renders in quick succession
+    if (this._renderTimeout) {
+      clearTimeout(this._renderTimeout);
+    }
+    this._renderTimeout = setTimeout(() => {
+      this.render();
+      this._renderTimeout = null;
+    }, 0);
   }
 
   showImage(index) {
+    if (!this.imageList || this.imageList.length === 0) {
+      console.error('imageList is empty or undefined');
+      return;
+    }
+    
     if (index < 0) index = this.imageList.length - 1;
     if (index >= this.imageList.length) index = 0;
     
     this.currentImageIndex = index;
     const modalImage = this.shadowRoot.querySelector('.modal-image');
-    modalImage.src = this.imageList[index];
+    if (modalImage) {
+      modalImage.src = this.imageList[index];
+    }
     
     // Hide/show arrows based on number of images
     const arrows = this.shadowRoot.querySelectorAll('.modal-arrow');
@@ -108,6 +127,8 @@ class GameMediaGallery extends HTMLElement {
     const title = this.getAttribute('title') || 'Screenshots & Videos';
     const images = this.getAttribute('images');
     const layout = this.getAttribute('layout') || 'grid';
+    
+    // Always update imageList when rendering
     this.imageList = images ? images.split(',').map(img => img.trim()) : [];
 
     this.shadowRoot.innerHTML = `
@@ -197,8 +218,8 @@ class GameMediaGallery extends HTMLElement {
 
         .modal-close {
           position: absolute;
-          top: -2rem;
-          right: 0;
+          top: -3rem;
+          right: -0.5rem;
           background: transparent;
           border: none;
           color: #fff;
@@ -207,6 +228,7 @@ class GameMediaGallery extends HTMLElement {
           padding: 0.5rem;
           line-height: 1;
           transition: opacity 0.2s ease;
+          z-index: 1002;
         }
 
         .modal-close:hover {
