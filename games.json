@@ -13,10 +13,10 @@
                 "/assets/images/the-door-at-the-end-of-the-hall/Screenshot_4.png",
                 "/assets/images/the-door-at-the-end-of-the-hall/Screenshot_5.png"
             ],
-            "banner": "Wishlist Now!",
+            "banner": "Now Available!",
             "bannerColor": "green",
             "steamLink": "https://store.steampowered.com/app/4405240/The_Door_at_the_End_of_the_Hall/",
-            "steamButtonText": "Wishlist on Steam"
+            "steamButtonText": "Buy on Steam"
         },
         {
             "id": "fire-escape",
